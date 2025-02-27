@@ -45,12 +45,16 @@ This repository contains a **FastAPI-based embedding service** for **MyWAI**, de
    ```bash
    git clone https://github.com/AadilGani/MyWAI-Embedding-Service-with-security.git
 
-### Create a virtual environment and activate it:
+2. **Create a virtual environment and activate it:**
+   
   ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use venv\Scripts\activate
+  python -m venv venv
+```bash
+  source venv/bin/activate  # On Windows use venv\Scripts\activate
 
-### Install the required dependencies:
+3. **Install the required dependencies:**
+
+
 
 ```bash
   pip install -r requirements.txt
