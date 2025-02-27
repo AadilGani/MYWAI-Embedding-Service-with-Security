@@ -74,8 +74,7 @@ This repository contains a **FastAPI-based embedding service** for **MyWAI**, de
 6. **Start the FastAPI server:**
 
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 1213
-
+uvicorn app:app --host 0.0.0.0 --port 1213`
 
 # API Endpoints
 ### Generate Embeddings
