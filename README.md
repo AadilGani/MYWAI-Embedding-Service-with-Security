@@ -72,8 +72,7 @@ This repository contains a **FastAPI-based embedding service** for **MyWAI**, de
 - **Ensure your Auth0 application is configured to issue tokens with the required claims.
 
 6. **Start the FastAPI server:**
-
-```bash
+7. 
 uvicorn app:app --host 0.0.0.0 --port 1213`
 
 # API Endpoints
