@@ -46,40 +46,35 @@ This repository contains a **FastAPI-based embedding service** for **MyWAI**, de
    git clone https://github.com/AadilGani/MyWAI-Embedding-Service-with-security.git
 
 2. **Create a virtual environment and activate it:**
+
+   ```bash
+   python -m venv venv
    
-  ```bash
-  python -m venv venv
-```bash
-  source venv/bin/activate  # On Windows use venv\Scripts\activate
-
+   ```bash
+   source venv/bin/activate  # On Windows use venv\Scripts\activate
+   
 3. **Install the required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+4. **Set up the PostgreSQL database:**
+- **Create a new database and user:
 
+   ```bash
+   CREATE DATABASE experiment;
+   CREATE USER mywai WITH ENCRYPTED PASSWORD 'Bth-12345';
+   GRANT ALL PRIVILEGES ON DATABASE experiment TO mywai;
 
+- **Update the CONNECTION_STRING in the code with your database credentials if necessary.
 
-```bash
-  pip install -r requirements.txt
+5. **Configure Auth0:**
 
-### Set up the PostgreSQL database:
+- **Update the AUTH0_CONFIG dictionary in the code with your Auth0 domain, audience, and issuer.
+- **Ensure your Auth0 application is configured to issue tokens with the required claims.
 
-Create a new database and user:
-
-```bash
-  CREATE DATABASE experiment;
- CREATE USER mywai WITH ENCRYPTED PASSWORD 'Bth-12345';
- GRANT ALL PRIVILEGES ON DATABASE experiment TO mywai;
-
-Update the CONNECTION_STRING in the code with your database credentials if necessary.
-
-### Configure Auth0:
-
-Update the AUTH0_CONFIG dictionary in the code with your Auth0 domain, audience, and issuer.
-
-Ensure your Auth0 application is configured to issue tokens with the required claims.
-
-### Start the FastAPI server:
+6. **Start the FastAPI server:**
 
 ```bash
-  uvicorn app:app --host 0.0.0.0 --port 1213
+uvicorn app:app --host 0.0.0.0 --port 1213
 
 
 # API Endpoints
